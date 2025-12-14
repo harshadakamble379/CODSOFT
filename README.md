@@ -1,2 +1,2 @@
 # CODSOFT
-Java Number Game app
+Internship tasks
