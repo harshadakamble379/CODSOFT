@@ -22,7 +22,7 @@ public class CurrencyConverter {
             String apiUrl = "https://api.frankfurter.app/latest?from=" 
                             + base + "&to=" + target;
 
-            // Modern HTTP Client (Java 11+)
+            
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(apiUrl))
@@ -32,8 +32,7 @@ public class CurrencyConverter {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             String body = response.body();
 
-            // Extract exchange rate manually
-            // Example response: {"amount":1.0,"base":"USD","date":"2025-12-14","rates":{"EUR":0.94}}
+            
             String rateStr = body.split(target + "\":")[1].split("}")[0].trim();
             double rate = Double.parseDouble(rateStr);
 
@@ -49,3 +48,4 @@ public class CurrencyConverter {
         sc.close();
     }
 }
+
