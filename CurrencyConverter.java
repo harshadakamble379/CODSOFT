@@ -8,7 +8,7 @@ public class CurrencyConverter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        
         try {
             System.out.print("Enter base currency (USD, INR, EUR): ");
             String base = sc.next().toUpperCase();
@@ -48,4 +48,5 @@ public class CurrencyConverter {
         sc.close();
     }
 }
+
 
