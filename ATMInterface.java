@@ -73,7 +73,7 @@ class ATM {
     }
 }
 
-// Main class — must match file name
+// Main class
 public class ATMInterface {
     public static void main(String[] args) {
         BankAccount account = new BankAccount(5000);
@@ -81,3 +81,4 @@ public class ATMInterface {
         atm.start();
     }
 }
+
